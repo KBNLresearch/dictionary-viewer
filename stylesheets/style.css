@@ -1,0 +1,349 @@
+/* Global */
+
+* { 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px;
+}
+
+html { 
+    width: 100%; 
+    height: 100%; 
+    overflow-x: auto; 
+    overflow-y: scroll; 
+}
+
+body { 
+    width: 100%; 
+    height: 100%; 
+    /* background-color: #4C575F; */
+    background-color: #fff;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 12px;
+    font-weight: normal; 
+    line-height: 20px;
+    color: #000;
+}
+
+div#wrapper 
+{ 
+    position: relative; 
+    display: block; 
+    width: 870px; 
+    min-height: 100%; 
+    margin: 0px auto; 
+    background-color: #FFF;
+    padding: 0px 50px;
+    z-index: 0;
+}
+
+.clear { 
+    clear: both; 
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a, a:active 
+{
+    color: #495281;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited
+{
+    color: #495281;
+}
+
+a:hover 
+{
+    color: #495281;
+    text-decoration: underline; 
+}
+
+ul {
+    list-style-type: none;
+    /* margin: 20px 0; */
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #999;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #999;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #999;
+}
+
+.button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    outline: 0;
+    height: 42px;
+    text-align: center;
+    padding: 0px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    float: left;
+}
+
+.button:hover {
+    background-color: #eee;
+}
+
+.button.selected {
+    background-color: #eee;
+}
+
+/* Menu */
+#menu {
+    display: block;
+    width: 970px;
+    margin: 0px auto; 
+    height: 25px;
+    z-index: 100;
+    overflow: visible;
+    position: relative;
+}
+
+/* Logo */
+
+div#logo {
+    padding: 50px 0px;
+}
+
+/* Search */
+
+div#search {
+    height: 42px;
+    width: 100%;
+}
+
+input#dict {
+    width: 528px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+    padding: 0px 15px;
+    font-size: 13px;
+    color: black;
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+input#submit {
+    width: 72px; 
+}
+
+/* Message */
+
+div#message {
+    
+}
+
+div#message p {
+    border-radius: 3px;
+    height: 40px;
+    border: 1px solid;
+    line-height: 40px;
+    padding: 0px 15px;
+    font-size: 13px;
+    margin: 10px 0px 0 0;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+div#message p.loading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;   
+}
+
+/* Chart */
+
+div#chart {
+    margin: 50px 0px;
+}
+
+div#chart { 
+    font-size: 10px;
+}
+
+path { 
+    stroke-width: 1.5;
+    fill: none;
+    stroke-linecap: square;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1;
+    shape-rendering: auto;
+}
+
+.axis text {
+    fill: #999;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: normal;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+/*.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}*/
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
+/* Settings */
+
+div#settings {
+}
+
+table#list {
+    width: 100%;
+    margin: 20px 0 50px 0;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 50px;
+}
+
+tr.table-header {
+    height: 0px;
+}
+
+th {
+    text-align: left;
+}
+
+th.color {
+    width: 20px;
+}
+
+th.dict {
+    /* width: 250px; */
+}
+
+th.count {
+    width: 80px;
+}
+
+th.min_words {
+    width: 80px;
+}
+
+th.download {
+    width: 80px;
+}
+
+th.delete {
+    width: 80px;
+}
+
+td, th {
+    border-bottom: 1px solid #eee;
+}
+
+td, th {
+    padding: 10px;
+}
+
+div.legend {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+}
+
+span.count {
+    margin: 0 0 0 4px;
+}
+
+div#frequency-buttons {
+    margin: 20px 0 0 0;
+}
+
+input#relative {
+    margin: 0 10px 0 0;
+}
+
+/* Intro */
+
+div#intro {
+   margin: 50px 0 0 0; 
+}
+
+div#intro h2 {
+   margin: 0px 0 35px 0; 
+}
+
+div#intro h3 {
+   margin: 0px 0 5px 0; 
+}
+
+div#intro p {
+   margin: 0px 0 35px 0; 
+}
+
+/* Top words */
+
+div#top_words {
+ 
+}
+
+/* Top articles */
+
+div#top_articles {
+    /* margin: 50px 0 0 0; */
+}
+
+/* Footer */
+
+div#footer {
+    height: 50px;
+}
